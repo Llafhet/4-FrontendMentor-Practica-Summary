@@ -1,0 +1,149 @@
+:root{
+/* Primary */
+--Blue100: hsl(225, 100%, 94%);
+--Blue700: hsl(245, 75%, 52%);
+--hover: hsl(245, 81%, 60%);
+--fondo:rgb(25, 25, 25);
+
+/* Neutral */
+--Blue50: hsl(225, 100%, 98%);
+--Gray600: hsl(224, 23%, 55%);
+--Blue950: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo);
+}
+
+.card{
+    background-color: var(--Blue50);
+    width: 90%;
+    max-width: 450px;
+    min-width: 375px;
+    height: 600px;
+    text-align: center;
+    margin: 80px auto;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+    "image"
+    "texts"
+    "butons";
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 15px 15px 0 0;
+    grid-area: image;
+}
+
+.texts{
+    /* margin: 30px 20px; */
+    grid-area: texts;
+}
+
+.butons{
+    text-decoration: none;
+    grid-area: butons;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.buton{
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: var(--Blue100);
+    border: 0;
+    box-shadow: 1px 1px 5px;
+    font-size: 1rem;
+}
+
+.buton--proceed{
+    background-color: var(--Blue700);
+}
+
+.buton--proceed:hover{
+    background-color: var(--hover);
+    color: var(--Blue100);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buton--cancel{
+    background-color:var(--Blue50);
+    box-shadow: none;
+}
+
+.buton--cancel:hover{
+    color: var(--fondo);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card__title{
+    margin: 25px 0 20px;
+}
+
+.card__paragraph{
+    margin-bottom: 30px;
+}
+
+.plan{
+    background-color: var(--Blue100);
+    height: 60px;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+
+}
+
+.image2{
+    width: 60px;
+    margin-right: 15px;
+}
+
+p{
+    margin: auto 0;
+}
+
+.anual{
+    font-weight: bold;
+}
+
+.year{
+    color: var(--Gray600);
+}
+
+.change{
+   margin: auto 0;
+   margin-left: auto;
+   padding-right: 20px;
+   text-decoration: none;
+   color: var(--Gray600);
+}
+
+.change:hover{
+    color: var(--Blue700);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text--column{
+    margin: auto 0;
+}
